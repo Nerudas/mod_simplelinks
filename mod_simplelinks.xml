@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="module" client="site" method="upgrade">
+	<name>MOD_SIMPLELINKS</name>
+	<author>Nerudas</author>
+	<creationDate>December 2017</creationDate>
+	<copyright>Copyright (c) 2015 - 2017 Nerudas. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@nerudas.ru</authorEmail>
+	<authorUrl>nerudas.ru</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_SIMPLELINKS_DESCRIPTION</description>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_simplelinks.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_simplelinks.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_simplelinks.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_simplelinks.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_simplelinks">mod_simplelinks.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="links" type="subform"
+					   label="MOD_SIMPLELINKS_PARAMS_LINKS"
+					   multiple="true"
+					   layout="joomla.form.field.subform.repeatable-table">
+					<form>
+						<field name="text" type="text"
+							   label="MOD_SIMPLELINKS_PARAMS_LINKS_TEXT"
+							   hint="MOD_SIMPLELINKS_PARAMS_LINKS_TEXT"/>
+						<field name="href" type="text"
+							   label="MOD_SIMPLELINKS_PARAMS_LINKS_HREF"
+							   hint="MOD_SIMPLELINKS_PARAMS_LINKS_HREF"/>
+						<field name="target" type="list"
+							   default=""
+							   class="advancedSelect"
+							   label="MOD_SIMPLELINKS_PARAMS_LINKS_TARGET"
+							   hint="MOD_SIMPLELINKS_PARAMS_LINKS_TARGET">
+							<option value="">MOD_SIMPLELINKS_PARAMS_LINKS_TARGET_NONE</option>
+							<option value="_blank">MOD_SIMPLELINKS_PARAMS_LINKS_TARGET_BLANK</option>
+						</field>
+						<field name="class" type="text"
+							   label="MOD_SIMPLELINKS_PARAMS_LINKS_CLASS"
+							   hint="MOD_SIMPLELINKS_PARAMS_LINKS_CLASS"/>
+					</form>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					   label="JFIELD_ALT_LAYOUT_LABEL"
+					   description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+				<field name="moduleclass_sfx" type="textarea"
+					   label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					   description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					   rows="3"/>
+				<field name="cache" type="list"
+					   label="COM_MODULES_FIELD_CACHING_LABEL"
+					   description="COM_MODULES_FIELD_CACHING_DESC"
+					   default="1">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text"
+					   label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					   description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					   default="900"/>
+				<field name="cachemode" type="hidden"
+					   default="static">
+					<option value="static">Static</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="Simple Links Module">
+			https://update.nerudas.ru?extension=mod_simplelinks
+		</server>
+	</updateservers>
+</extension>

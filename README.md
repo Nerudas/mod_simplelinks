@@ -1,2 +1,3 @@
-# mod_simplelinks
-Simple Links Module
+# Simple Links Module
+
+Module for outputting links
