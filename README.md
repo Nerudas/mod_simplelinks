@@ -1,7 +1,7 @@
 # Simple Links Module
 Module for outputting links
 
-**Supported Joomla versions:** 3.8.0 or later  
+**Supported Joomla versions:** 3.8.0 and later  
 
 
 ## Internal project - No support
